@@ -1,0 +1,36 @@
+{
+  "name": "wasmi",
+  "version": "0.0.3",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "run-file": "node --experimental-import-meta-resolve --experimental-network-imports --experimental-wasm-modules --experimental-specifier-resolution=node --no-warnings --loader ts-node/esm",
+    "lint": "pnpm exec -- eslint --fix --ext .ts src",
+    "format": "pnpm exec -- prettier --write --ignore-path .gitignore \"**/*.{ts,js,json,md}\"",
+    "release": "sh publish.sh"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.3.11",
+    "@swc/helpers": "^0.4.12",
+    "@tsconfig/node18-strictest-esm": "^1.0.1",
+    "@types/eslint": "^8.4.9",
+    "@types/node": "^18.11.9",
+    "@types/prettier": "^2.7.1",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.0",
+    "typescript": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=18.12.1",
+    "pnpm": ">=7.14.0"
+  },
+  "author": "Omar Aziz <github@omaraziz.dev>",
+  "license": "ISC"
+}
